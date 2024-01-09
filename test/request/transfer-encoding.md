@@ -198,9 +198,11 @@ off=5 len=32 span[url]="/chunked_w_unicorns_after_length"
 off=48 len=17 span[header_field]="Transfer-Encoding"
 off=67 len=7 span[header_value]="chunked"
 off=78 headers complete method=3 v=1/1 flags=208 content_length=0
+off=81 len=40 span[chunk parameters]="ilovew3;somuchlove=aretheseparametersfor"
 off=123 chunk header len=5
 off=123 len=5 span[body]="hello"
 off=130 chunk complete
+off=133 len=14 span[chunk parameters]="blahblah; blah"
 off=149 chunk header len=6
 off=149 len=6 span[body]=" world"
 off=157 chunk complete
@@ -511,7 +513,7 @@ off=4 len=4 span[url]="/url"
 off=19 len=17 span[header_field]="Transfer-Encoding"
 off=38 len=7 span[header_value]="chunked"
 off=49 headers complete method=4 v=1/1 flags=208 content_length=0
-off=51 error code=2 reason="Invalid character in chunk parameters"
+off=50 error code=12 reason="Invalid character in chunk size"
 ```
 
 ## Invalid OBS fold after chunked value

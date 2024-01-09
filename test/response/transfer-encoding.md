@@ -28,19 +28,7 @@ off=31 len=10 span[header_value]="text/plain"
 off=43 len=17 span[header_field]="Transfer-Encoding"
 off=62 len=7 span[header_value]="chunked"
 off=73 headers complete status=200 v=1/1 flags=208 content_length=0
-off=79 chunk header len=37
-off=79 len=35 span[body]="This is the data in the first chunk"
-off=114 len=1 span[body]=cr
-off=115 len=1 span[body]=lf
-off=118 chunk complete
-off=122 chunk header len=28
-off=122 len=26 span[body]="and this is the second one"
-off=148 len=1 span[body]=cr
-off=149 len=1 span[body]=lf
-off=152 chunk complete
-off=157 chunk header len=0
-off=159 chunk complete
-off=159 message complete
+off=75 error code=12 reason="Invalid character in chunk size"
 ```
 
 ### `chunked` before other transfer-encoding
